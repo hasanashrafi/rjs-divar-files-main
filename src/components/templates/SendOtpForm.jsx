@@ -1,19 +1,18 @@
-import React from 'react';
+
 import { sendOtp } from '../../services/auth';
 
-function SendOtpForm({ setStep, mobile, setCode, setMobile }) {
-    const submitHandler = async (e) => {
-        e.preventDefault()
-
+function SendOtpForm({ mobile,  setMobile,setStep }) {
+    const submitHandler = async (event) => {
+        event.preventDefault()
+    
         if (mobile.length !== 11) return;
 
         const { response, error } = await sendOtp(mobile)
-        
-        if (response) setStep(2)
-        if (error) console.log(error.response.data.message);
+
+        if (response) setStep(2);
+        if (error) console.log(error.response);
         
         console.log({ response, error });
-
     }
     return (
         <form onSubmit={submitHandler}>
@@ -28,7 +27,7 @@ function SendOtpForm({ setStep, mobile, setCode, setMobile }) {
                 id='input'
                 placeholder='شماره موبایل . . . '
                 value={mobile}
-                onChange={e => setMobile(e.target.value)} />
+                onChange={(e) => setMobile(e.target.value)} />
             <button type='submit'>ارسال کد تایید</button>
         </form>
     );
