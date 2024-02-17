@@ -1,5 +1,5 @@
-import React from 'react';
-import { checkOtp } from '../../services/auth';
+import { checkOtp } from 'services/auth';
+import {setCookie} from 'utils/cookie';
 
 
 function CheckOtpForm({ code, setCode, setStep, mobile }) {
@@ -11,7 +11,7 @@ function CheckOtpForm({ code, setCode, setStep, mobile }) {
     const { response, error } = await checkOtp(mobile, code)
 
     if (response) {
-      console.log(response);
+      setCookie(response.data)
     }
     if (error) console.log(error.response);
 
