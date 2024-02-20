@@ -1,5 +1,5 @@
 import { api } from "configs/api"
-
+//send data to auth/send-otp
 const sendOtp = async (mobile) => {
     try {
         const response = await api.post('auth/send-otp', { mobile })
@@ -8,7 +8,7 @@ const sendOtp = async (mobile) => {
         return { error }
     }
 }
-
+//check mobile and code
 const checkOtp = async (mobile, code) => {
     try {
         const response = await api.post("auth/check-otp", { mobile, code })
