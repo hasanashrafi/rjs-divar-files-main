@@ -10,11 +10,11 @@ import getProfile from "services/user";
 
 
 function Router() {
-    const { data, isLoading,error } = useQuery({
-       queryKey: ["profile"],
-       queryFn: getProfile()
+    const { data, isLoading, error } = useQuery({
+        queryKey: ["profile"],
+        queryFn: getProfile,
     })
-    console.log({ data, isLoading ,error});
+    console.log({ data, isLoading, error });
 
     // if(isLoading) return <h1>در حال بروزرسانی </h1>
     return (
