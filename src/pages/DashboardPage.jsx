@@ -3,7 +3,8 @@
 function DashboardPage() {
   return (
     <div>
-      dashboard page
+    <h2>dashboard page</h2>
+      
     </div>
   );
 }
