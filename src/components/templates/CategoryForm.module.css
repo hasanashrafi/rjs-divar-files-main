@@ -16,21 +16,24 @@
   border: 1px solid silver;
   margin-bottom: 30px;
 }
-.form button{
-    background-color: #a62626;
-    color:#fff;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
+.form button {
+  background-color: #a62626;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
-.form p{
-    background-color: #a62626;
-    color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
+.form button:disabled {
+  opacity: 0.5;
+}
+.form p {
+  background-color: #a62626;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
 }
