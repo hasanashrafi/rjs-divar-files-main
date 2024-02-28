@@ -15,7 +15,7 @@ function CategoryForm() {
     const { mutate, isLoading, error, data } = useMutation(addCategory, {
         onSuccess: () => queryClient.invalidateQueries("get-categories"),
     })
-    console.log({ data, isLoading, error });
+   
 
     const submitHandler = (e) => {
         e.preventDefault()
