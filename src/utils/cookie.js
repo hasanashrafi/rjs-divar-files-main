@@ -11,4 +11,9 @@ const getCookie = (cookieName) => {
         ?.split("=")[1]
 }
 
-export { setCookie, getCookie }
+const deleteCookie = (tokens)=>{
+    document.cookie = `accessToken=${tokens.accessToken}; max-age=${0 * 0 * 0 * 0}`
+
+}
+
+export { setCookie, getCookie,deleteCookie }
