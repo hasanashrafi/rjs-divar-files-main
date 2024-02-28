@@ -74,7 +74,6 @@ function AddPost() {
             <label htmlFor="images">عکس </label>
             <input type="file" name="images" id="images" />
             <button onClick={addHandler}>ایجاد</button>
-           
         </form>
     );
 }
