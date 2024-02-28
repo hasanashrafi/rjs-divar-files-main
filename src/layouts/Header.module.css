@@ -37,3 +37,25 @@
   border-radius: 5px;
   margin-right: 40px;
 }
+.header .navBar {
+  width: 90px;
+  height: fit-content;
+  position: absolute;
+  background-color: #f3f1f1;
+  margin-top: 0px;
+  align-items: center;
+  padding: 2px;
+  opacity: 0.9;
+  border-radius: 3px;
+ 
+
+}
+.header .navBar a {
+  background-color: inherit;
+  color: #000;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
