@@ -12,8 +12,6 @@ function SendOtpForm({ mobile,  setMobile,setStep }) {
 
         if (response) setStep(2);
         if (error) console.log(error.response);
-        
-        console.log({ response, error });
     }
     return (
         <form onSubmit={submitHandler} className={styles.form}>
