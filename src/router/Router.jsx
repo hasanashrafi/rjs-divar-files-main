@@ -7,7 +7,7 @@ import AdminPage from "pages/AdminPage";
 import AuthPage from "pages/AuthPage";
 import DashboardPage from "pages/DashboardPage";
 import HomePage from "pages/HomePage";
-import getProfile from "services/user";
+import {getProfile} from "services/user";
 
 
 function Router() {
@@ -15,7 +15,7 @@ function Router() {
         queryKey: ["profile"],
         queryFn: getProfile,
     })
-    console.log({ data, isLoading, error });
+    
 
     if(isLoading) return <Loader/>
     return (
