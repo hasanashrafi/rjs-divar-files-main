@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { checkOtp } from 'services/auth';
-import getProfile from 'services/user';
+import {getProfile} from 'services/user';
 import { setCookie } from 'utils/cookie';
 
 import styles from "./CheckOtpForm.module.css"
@@ -22,7 +22,6 @@ function CheckOtpForm({ code, setCode, setStep, mobile }) {
       refetch()
     }
     if (error) console.log(error.response);
-    console.log({ response, error });
   }
   return (
     <form onSubmit={submitHandler} className={styles.form}>
