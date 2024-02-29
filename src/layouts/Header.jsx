@@ -12,6 +12,7 @@ function Header() {
     queryKey: ["profile"],
     queryFn: getProfile,
   })
+  
     return (
 
         <header className={styles.header}>
@@ -31,7 +32,7 @@ function Header() {
                         <p>دیوار من</p>
                     </span>
 
-                    <div className={styles.navBar} onClick={deleteCookie}>
+                    <div className={styles.navBar} onClick={deleteCookie} >
                         <Link to="/auth" > خروج</Link>
                     </div>
 
@@ -41,7 +42,7 @@ function Header() {
                     ثبت آگهی
                 </Link>
             </div>
-        </header>
+                    </header>
 
     );
 }
