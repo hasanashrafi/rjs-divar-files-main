@@ -10,7 +10,6 @@ const getCookie = (cookieName) => {
             .trim().split("=")[0] === cookieName)
         ?.split("=")[1]
 }
-
 const deleteCookie = (tokens)=>{
     document.cookie = `accessToken=${tokens.accessToken}; max-age=${0 * 0 * 0 * 0}`
     
